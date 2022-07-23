@@ -6,8 +6,8 @@
   "author": "Fatih BARAÇKILIÇ <fatihb469@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf build/ && tsc",
-    "start": "node build/index.js"
+    "build": "rm -rf dist/ && tsc",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",
