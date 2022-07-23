@@ -1,0 +1,63 @@
+@url = http://localhost:3000/books/
+@userId = 62dc1e9a0961309ceef547ff
+
+### Health Check
+GET http://localhost:3000/ping HTTP/1.1
+
+### Add New Author
+POST {{url}}create HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "Veli",
+    "surname": "BARAÇKILIÇ"
+}
+
+### Get author
+GET {{url}}getAuthor/{{userId}} HTTP/1.1
+
+### Get Authors
+GET {{url}}getAuthors HTTP/1.1
+
+### Update author
+PATCH {{url}}updateAuthor/{{userId}} HTTP/1.1
+Content-Type: application/json 
+
+{
+    
+    "name": "888",
+    "surname": "adasdasd"
+}
+
+### Delete author
+DELETE {{url}}deleteAuthor/{{userId}} HTTP/1.1
+
+
+@bookId = 62dc1f130961309ceef54804
+
+### Add New Book
+POST {{url}}create HTTP/1.1
+Content-Type: application/json 
+
+{
+    "title": "a",
+    "author": "62dadd19435386a0f04657ab"
+}
+
+### Get book
+GET {{url}}getBook/{{bookId}} HTTP/1.1
+
+### Get books
+GET {{url}}getBooks HTTP/1.1
+
+### Update book
+PATCH {{url}}update/{{bookId}} HTTP/1.1
+Content-Type: application/json 
+
+{
+    "title": "myBook",
+    "author": "62dadd19435386a0f04657ab"
+}
+
+### Delete book
+DELETE {{url}}delete/{{bookId}} HTTP/1.1
